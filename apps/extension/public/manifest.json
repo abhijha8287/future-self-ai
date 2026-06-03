@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "FutureSelf AI",
+  "version": "1.0.0",
+  "description": "Decision intelligence layer that surfaces a Future Impact Report before consequential online actions.",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "FutureSelf AI"
+  },
+  "background": {
+    "service_worker": "assets/background.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "http://127.0.0.1:3000/*",
+    "https://www.amazon.com/*",
+    "https://www.amazon.in/*",
+    "https://www.amazon.co.uk/*",
+    "https://www.amazon.ca/*",
+    "https://www.amazon.ae/*",
+    "https://www.amazon.sg/*",
+    "https://www.amazon.com.au/*",
+    "https://www.flipkart.com/*",
+    "https://mail.google.com/*",
+    "https://www.linkedin.com/jobs/*",
+    "https://www.naukri.com/*",
+    "https://www.indeed.com/*",
+    "https://kite.zerodha.com/*",
+    "https://groww.in/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.com/*",
+        "https://www.amazon.in/*",
+        "https://www.amazon.co.uk/*",
+        "https://www.amazon.ca/*",
+        "https://www.amazon.ae/*",
+        "https://www.amazon.sg/*",
+        "https://www.amazon.com.au/*",
+        "https://www.flipkart.com/*",
+        "https://mail.google.com/*",
+        "https://www.linkedin.com/jobs/*",
+        "https://www.naukri.com/*",
+        "https://www.indeed.com/*",
+        "https://kite.zerodha.com/*",
+        "https://groww.in/*"
+      ],
+      "css": ["assets/content.css"],
+      "js": ["assets/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

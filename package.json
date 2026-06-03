@@ -1,0 +1,19 @@
+{
+  "name": "futureself-ai",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/extension",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace apps/web",
+    "dev:web": "npm run dev --workspace apps/web",
+    "dev:extension": "npm run dev --workspace apps/extension",
+    "build": "npm run build --workspace apps/web && npm run build --workspace apps/extension",
+    "build:web": "npm run build --workspace apps/web",
+    "build:extension": "npm run build --workspace apps/extension",
+    "lint": "npm run lint --workspace apps/web",
+    "typecheck": "npm run typecheck --workspace apps/extension && npm run typecheck --workspace apps/web"
+  }
+}
