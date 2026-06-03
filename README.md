@@ -4,6 +4,16 @@ FutureSelf AI is a Chrome Extension and dashboard that pauses important internet
 
 Tagline: "See the consequences before making the decision."
 
+## Screenshots
+
+### Dashboard overview
+
+![FutureSelf AI dashboard overview](./dashboard-screenshot.png)
+
+### Dashboard full view
+
+![FutureSelf AI dashboard full view](./dashboard-fullpage-screenshot.png)
+
 ## What is included
 
 - Manifest V3 Chrome extension with content scripts, popup settings, background service worker, and Chrome Storage history.
